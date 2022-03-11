@@ -58,13 +58,13 @@ same color after they have been visited */
 @keyframes mylogo {
     from {width: 25px;
         opacity: 0;}
-        
+
     to {width: 475px;
         opacity: 1;}
 }
     @media only screen and (min-width: 900px) {
         header {
-            display: flex;
+            /* display: flex; */
             flex-direction: row;
             justify-content: space-between;
         }
@@ -81,6 +81,12 @@ same color after they have been visited */
         .card {
             flex-basis: 250px;
         }
+        /* this aligns the pricing cards into the row position rather than the column I had it at*/
+        .pricing {
+            flex-direction: row;
+            justify-content: center;
+            justify-items: center;
+        }
     }
     /* removes motion by removing the animation */
     @media screen and (prefers-reduced-motion: reduce) {
@@ -94,9 +100,9 @@ same color after they have been visited */
             font-family: Poppins, serif, Arial, Helvetica, sans-serif;
             background-image: none;
         }
-        /* header {
+        header {
             align-items: stretch;
-        } */
+        }
         #logo {
             align-self: center;
         }
@@ -122,5 +128,8 @@ same color after they have been visited */
         /* No part of the gallery should be visible. */
         #gallery, .gallery {
             display: none;
+        }
+        .card li:nth-child(2)::after {
+            content: "\01F44D";
         }
     }
